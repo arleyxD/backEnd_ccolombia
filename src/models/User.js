@@ -20,6 +20,7 @@ const UserSchema = new Schema(
             required: true,
             default: 'registered'
         },
+        pedidos: [{ type: Schema.Types.ObjectId, ref: 'Pedidos' }],
     },{
         timestamps: true
     }
