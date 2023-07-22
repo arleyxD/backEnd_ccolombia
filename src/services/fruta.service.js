@@ -1,5 +1,5 @@
 // services/frutaService.js
-const Fruta = require('../models/Fruta');
+const Fruta = require('../models/Frutas');
 
 const getAll = async () => {
   return await Fruta.find();

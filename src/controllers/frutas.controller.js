@@ -1,5 +1,5 @@
 // controllers/frutaController.js
-const frutaService = require('../services/frutaService');
+const frutaService = require('../services/fruta.service');
 
 const getFrutas = async (req, res) => {
   const frutas = await frutaService.getAll();

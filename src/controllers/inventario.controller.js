@@ -1,5 +1,5 @@
 // controllers/inventarioController.js
-const inventarioService = require('../services/inventarioService');
+const inventarioService = require('../services/inventario.service');
 
 const getInventarios = async (req, res) => {
   const inventarios = await inventarioService.getAll();

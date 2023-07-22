@@ -1,5 +1,5 @@
 // controllers/tiendaController.js
-const tiendaService = require('../services/tiendaService');
+const tiendaService = require('../services/tienda.services');
 
 const getTiendas = async (req, res) => {
   const tiendas = await tiendaService.getAll();

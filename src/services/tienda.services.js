@@ -1,5 +1,5 @@
 // services/tiendaService.js
-const Tienda = require('../models/Tienda');
+const Tienda = require('../models/Tiendas');
 
 const getAll = async () => {
   return await Tienda.find().populate('productos');

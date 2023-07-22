@@ -4,7 +4,7 @@ const { route } = require('./routes/auth.routes');
 const authRouter = require( './routes/auth.routes' );
 const productosRouter = require( './routes/products.routes' );
 const frutasRouter = require('./routes/frutas.routes');
-const tiendaRoutes = require('./routes/tiendaRoutes');
+const tiendaRoutes = require('./routes/tienda.routes');
 const inventarioRoutes = require('./routes/inventario.routes');
 
 

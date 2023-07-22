@@ -1,7 +1,7 @@
 // routes/frutaRoutes.js
 const express = require('express');
 const router = express.Router();
-const frutaController = require('../controllers/frutaController');
+const frutaController = require('../controllers/frutas.controller');
 
 router.get('/', frutaController.getFrutas);
 router.get('/:id', frutaController.getFruta);

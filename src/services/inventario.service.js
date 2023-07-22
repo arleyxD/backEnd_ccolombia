@@ -1,5 +1,5 @@
 // services/inventarioService.js
-const Inventario = require('../models/Inventario');
+const Inventario = require('../models/invemtario');
 
 const getAll = async () => {
   return await Inventario.find().populate('id_tienda').populate('id_fruta');
