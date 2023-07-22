@@ -1,6 +1,15 @@
 const { dbConnection } = require('./config/mongo.config');
 const { route } = require('./routes/auth.routes');
 
+const authRouter = require( './routes/auth.routes' );
+const productosRouter = require( './routes/products.routes' );
+const frutasRouter = require('./routes/frutas.routes');
+const tiendaRoutes = require('./routes/tiendaRoutes');
+const inventarioRoutes = require('./routes/inventario.routes');
+
+
+
+
 require( 'dotenv' ).config();
 
 const 
@@ -17,8 +26,11 @@ app.use( cors() );              // Cross-Origin-Resources-Sharing
 app.use( express.json() );      // Lectura Parseo del body
 
 /** Define todas las rutas */
-app.use( '/api/auth', require( './routes/auth.routes' ) );
-app.use( '/api/products', require( './routes/products.routes' ) );
+app.use( '/api/auth', authRouter );
+app.use( '/api/products', productosRouter);
+app.use('/api/frutas', frutasRouter);
+app.use('/api/tiendas', tiendaRoutes);
+app.use('/api/inventario', inventarioRoutes);
 
 dbConnection();                 // Invoca la inicializacion de la base de datos
 
