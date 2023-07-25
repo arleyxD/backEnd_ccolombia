@@ -2,13 +2,44 @@
 const frutaService = require('../services/fruta.service');
 
 const getFrutas = async (req, res) => {
-  const frutas = await frutaService.getAll();
-  res.json(frutas);
+ 
+  try{
+    const frutas = await frutaService.getAll();
+        res.status( 200 ).json({
+          ok: true,
+          path: '/Frutas',
+          msg: 'Obtiene todos los Frutas',
+          products: frutas
+      }); 
+    }catch ( error ) {
+        console.log( error );
+        return res.status( 500 ).json({
+            ok: false,
+            path: '/Frutas',
+            msg: 'Error al obtener los Frutas'
+        });    
+  }
 }
 
 const getFruta = async (req, res) => {
+  try{
   const fruta = await frutaService.getById(req.params.id);
-  res.json(fruta);
+  
+      res.status( 200 ).json({
+        ok: true,
+        path: '/Frutas',
+        msg: 'Obtiene todos los Frutas',
+        products: fruta
+    }); 
+  }catch ( error ) {
+      console.log( error );
+      return res.status( 500 ).json({
+          ok: false,
+          path: '/Frutas',
+          msg: 'Error al obtener los Frutas'
+      });    
+}
+
 }
 
 const createFruta = async (req, res) => {
