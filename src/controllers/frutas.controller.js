@@ -8,7 +8,7 @@ const getFrutas = async (req, res) => {
         res.status( 200 ).json({
           ok: true,
           path: '/Frutas',
-          msg: 'Obtiene todos los Frutas',
+          msg: 'Obtiene todas las Frutas',
           products: frutas
       }); 
     }catch ( error ) {
@@ -16,7 +16,7 @@ const getFrutas = async (req, res) => {
         res.status( 500 ).json({
             ok: false,
             path: '/Frutas',
-            msg: 'Error al obtener los Frutas'
+            msg: 'Error al obtener las Frutas'
         });    
   }
 }
@@ -28,7 +28,7 @@ const getFruta = async (req, res) => {
       res.status( 200 ).json({
         ok: true,
         path: '/Frutas',
-        msg: 'Obtiene todos los Frutas',
+        msg: 'Obtiene la Fruta',
         products: fruta
     }); 
   }catch ( error ) {
@@ -36,7 +36,7 @@ const getFruta = async (req, res) => {
       res.status( 500 ).json({
           ok: false,
           path: '/Frutas',
-          msg: 'Error al obtener los Frutas'
+          msg: 'Error al obtener la Fruta'
       });    
 }
 
