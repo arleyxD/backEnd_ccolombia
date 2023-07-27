@@ -6,6 +6,7 @@ const productosRouter = require( './routes/products.routes' );
 const frutasRouter = require('./routes/frutas.routes');
 const tiendaRoutes = require('./routes/tienda.routes');
 const inventarioRoutes = require('./routes/inventario.routes');
+const tiendaProductosRoutes = require('./routes/tienda_producto.routes')
 
 
 
@@ -31,6 +32,7 @@ app.use( '/api/products', productosRouter);
 app.use('/api/frutas', frutasRouter);
 app.use('/api/tiendas', tiendaRoutes);
 app.use('/api/inventario', inventarioRoutes);
+app.use('/api/tiendaProductos', tiendaProductosRoutes);
 
 dbConnection();                 // Invoca la inicializacion de la base de datos
 
