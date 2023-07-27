@@ -6,16 +6,16 @@ const getTiendas = async (req, res) => {
       const tiendas = await Tienda_ProductosService.getAll();
           res.status( 200 ).json({
             ok: true,
-            path: '/Tiendas',
-            msg: 'Obtiene todas las Tiendas',
+            path: '/TiendasProductos',
+            msg: 'Obtiene todas las Tiendas Productos',
             products: tiendas
         }); 
       }catch ( error ) {
           console.log( error );
           res.status( 500 ).json({
               ok: false,
-              path: '/Tiendas',
-              msg: 'Error al obtener las Tiendas'
+              path: '/TiendasProductos',
+              msg: 'Error al obtener las Tiendas Productos'
           });    
     }
   }
@@ -25,16 +25,16 @@ const getTiendas = async (req, res) => {
     
         res.status( 200 ).json({
           ok: true,
-          path: '/Frutas',
-          msg: 'Obtiene la tienda',
+          path: '/TiendasProductos',
+          msg: 'Obtiene la tienda Producto',
           products: tienda
       }); 
     }catch ( error ) {
         console.log( error );
         res.status( 500 ).json({
             ok: false,
-            path: '/Tiendas',
-            msg: 'Error al obtener la tienda'
+            path: '/TiendasProductos',
+            msg: 'Error al obtener la tienda Producto'
         });    
   }
   
@@ -45,8 +45,8 @@ const getTiendas = async (req, res) => {
       const tienda = await Tienda_ProductosService.create(req.body);
       res.status( 200 ).json({
         ok: true,
-        path: '/Tiendas',
-        msg: 'Tienda creada',
+        path: '/TiendasProductos',
+        msg: 'Tienda Producto creada',
         products: tienda
     });
   
@@ -54,8 +54,8 @@ const getTiendas = async (req, res) => {
       console.log( error );
       return res.status( 500 ).json({
         ok: false,
-        path: '/Tiendas',
-        msg: 'Error al crear la Tienda'
+        path: '/TiendasProductos',
+        msg: 'Error al crear la Tienda Producto'
       });
   
     }
@@ -66,8 +66,8 @@ const getTiendas = async (req, res) => {
       const tienda = await Tienda_ProductosService.update(req.params.id, req.body);
       res.status(200).json({
         ok: true,
-        path: '/Tiendas',
-        msg: 'Modificada la Tienda',
+        path: '/TiendasProductos',
+        msg: 'Modificada la Tienda Producto',
         products: tienda
       });
   
@@ -76,8 +76,8 @@ const getTiendas = async (req, res) => {
       console.error(error);
       res.status(500).json({
         ok: false,
-        path: '/Tiendas',
-        msg: 'Error al modificar la tienda'
+        path: '/TiendasProductos',
+        msg: 'Error al modificar la tienda Producto'
       });
     }
     
@@ -88,16 +88,16 @@ const getTiendas = async (req, res) => {
       const tienda = await Tienda_ProductosService.remove(req.params.id);
     return res.status(200).json({
       ok: true,
-      path: '/Tiendas',
-      msg: 'Tienda eliminada',
+      path: '/TiendasProductos',
+      msg: 'Tienda Producto eliminada',
       products: tienda
     });
     }catch ( error ) {
       console.error(error);
       return res.status(500).json({
         ok: false,
-        path: '/Tienda',
-        msg: 'Error al eliminar la Tienda'
+        path: '/TiendaProductos',
+        msg: 'Error al eliminar la Tienda Producto'
       });
     }
     
