@@ -2,11 +2,11 @@
 const Tienda = require('../models/Tiendas');
 
 const getAll = async () => {
-  return await Tienda.find().populate('productos');
+  return await Tienda.find();
 }
 
 const getById = async (id) => {
-  return await Tienda.findById(id).populate('productos');
+  return await Tienda.findById(id);
 }
 
 const create = async (data) => {
