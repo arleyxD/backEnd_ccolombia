@@ -7,6 +7,7 @@ const tiendasSchema = new Schema({
     scheduleStart:  { type: String, required: true },
     scheduleEnd:  { type: String, required: true },
     contact:  { type: String, required: true },
+    idUsuario:{type: String, required: true}
   });
 
   module.exports = model( 'Tiendas', tiendasSchema );
