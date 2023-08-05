@@ -9,7 +9,7 @@ const getFrutas = async (req, res) => {
           ok: true,
           path: '/Frutas',
           msg: 'Obtiene todas las Frutas',
-          products: frutas
+          product: frutas
       }); 
     }catch ( error ) {
         console.log( error );
@@ -29,7 +29,7 @@ const getFruta = async (req, res) => {
         ok: true,
         path: '/Frutas',
         msg: 'Obtiene la Fruta',
-        products: fruta
+        product: fruta
     }); 
   }catch ( error ) {
       console.log( error );
@@ -49,7 +49,7 @@ const createFruta = async (req, res) => {
       ok: true,
       path: '/Frutas',
       msg: 'Fruta creada',
-      products: fruta
+      product: fruta
   });
 
   }catch ( error ) {
@@ -70,7 +70,7 @@ const updateFruta = async (req, res) => {
       ok: true,
       path: '/Frutas',
       msg: 'Modificada la fruta',
-      products: fruta
+      product: fruta
     });
 
 
@@ -92,7 +92,7 @@ const deleteFruta = async (req, res) => {
     ok: true,
     path: '/Frutas',
     msg: 'Fruta eliminada',
-    products: fruta
+    product: fruta
   });
   }catch ( error ) {
     console.error(error);
