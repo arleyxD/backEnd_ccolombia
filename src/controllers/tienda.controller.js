@@ -37,10 +37,27 @@ const getTienda = async (req, res) => {
       path: '/tiendas',
       msg: 'Error al obtener tienda'
     });
-
   }
-  
 }
+  const getTiendaUser = async (req, res) => {
+    try {
+      const tienda = await tiendaService.getByIdUser(req.params.id);
+      res.status(200).json({
+        ok: true,
+        path: '/tiendasUser',
+        msg: 'Llamar la tienda',
+        produt: tienda
+      });
+    }catch(error) {
+      console.error(error);
+      res.status(500).json({
+        ok: false,
+        path: '/tiendasUser',
+        msg: 'Error al obtener tienda'
+      });
+    }
+  }
+
 
 const createTienda = async (req, res) => {
   try {
@@ -103,4 +120,4 @@ const deleteTienda = async (req, res) => {
   
 }
 
-module.exports = { getTiendas, getTienda, createTienda, updateTienda, deleteTienda };
+module.exports = { getTiendas, getTienda, createTienda, updateTienda, deleteTienda, getTiendaUser };

@@ -6,7 +6,7 @@ const { validateToken } = require('../middlewares/validate-jwt.middleware');
 
 router.get('/', frutaController.getFrutas);
 router.get('/:id', frutaController.getFruta);
-router.post('/', validateToken, frutaController.createFruta);
+router.post('/',  frutaController.createFruta);
 router.put('/:id', validateToken, frutaController.updateFruta);
 router.delete('/:id', validateToken, frutaController.deleteFruta);
 
