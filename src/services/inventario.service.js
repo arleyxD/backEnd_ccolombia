@@ -8,6 +8,9 @@ const getAll = async () => {
 const getById = async (id) => {
   return await Inventario.findById(id).populate('id_tienda').populate('id_fruta');
 }
+const getByIdToF = async (id) => {
+  return await Inventario.find({id_tienda  : id});
+}
 
 const create = async (data) => {
   return await Inventario.create(data);
@@ -21,4 +24,4 @@ const remove = async (id) => {
   return await Inventario.findByIdAndDelete(id);
 }
 
-module.exports = { getAll, getById, create, update, remove };
+module.exports = { getAll, getById, create, update, remove ,getByIdToF};

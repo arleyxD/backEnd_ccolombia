@@ -5,8 +5,9 @@ const router = Router();
 const inventarioController = require('../controllers/inventario.controller');
 const { validateToken } = require('../middlewares/validate-jwt.middleware');
 
-router.get('/', validateToken, inventarioController.getInventarios);
-router.get('/:id', validateToken, inventarioController.getInventario);
+router.get('/', inventarioController.getInventarios);
+router.get('/:id', inventarioController.getInventario);
+router.get('/listado/:id', inventarioController.getInventarioTiendaoFruta);
 router.post('/', validateToken, inventarioController.createInventario);
 router.put('/:id', validateToken, inventarioController.updateInventario);
 router.delete('/:id', validateToken, inventarioController.deleteInventario);
