@@ -9,7 +9,7 @@ const getById = async (id) => {
   return await Inventario.findById(id).populate('id_tienda').populate('id_fruta');
 }
 const getByIdToF = async (id) => {
-  return await Inventario.find({id_tienda  : id});
+  return await Inventario.find({id_tienda  : id}).populate('id_fruta')  ;
 }
 
 const create = async (data) => {
